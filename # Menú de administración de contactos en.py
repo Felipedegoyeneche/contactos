@@ -37,6 +37,30 @@ def eliminar_contacto():
     else:
         print("Contacto no encontrado.\n")
 
+def menu():
+    while True:
+        print("=== Menú de Administración de Contactos ===")
+        print("1. Agregar contacto")
+        print("2. Buscar contacto")
+        print("3. Mostrar todos los contactos")
+        print("4. Eliminar contacto")
+        print("5. Salir")
+
+        opcion = input("Seleccione una opción (1-5): ")
+
+        if opcion == "1":
+            agregar_contacto()
+        elif opcion == "2":
+            buscar_contacto()
+        elif opcion == "3":
+            mostrar_contactos()
+        elif opcion == "4":
+            eliminar_contacto()
+        elif opcion == "5":
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opción inválida, intente nuevamente.\n")
 
 # Iniciar menú
 menu()
